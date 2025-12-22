@@ -1,0 +1,91 @@
+body {
+  background: #f0f4f8; /* light neutral */
+}
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* Headings */
+.heading-main {
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+/* Attractive Navbar */
+.navbar-custom {
+  background: linear-gradient(90deg, #1e3c72, #2a5298); /* gradient blue */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 10px 20px;
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.navbar-custom .nav-link {
+  color: #f8f9fa !important;
+  font-weight: 500;
+  margin-right: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ffc107 !important; /* golden hover */
+  transform: translateY(-2px); /* lift effect */
+}
+
+.navbar-custom .navbar-toggler {
+  border: none;
+}
+
+/* Forms */
+.form-custom {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.form-custom .form-label {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Gradient Button */
+.btn-gradient {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  transform: translateY(-2px);
+}/* Shared style for Edit & Delete buttons */
+.btn-action {
+  border-radius: 20px;          /* pill shape */
+  font-weight: bold;
+  padding: 8px 20px;            /* same size for both */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn-action:hover {
+  transform: translateY(-2px);  /* lift effect */
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}

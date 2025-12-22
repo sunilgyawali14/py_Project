@@ -1,0 +1,49 @@
+ {% extends 'curd_app/nav.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  {% load static %}
+<link rel="stylesheet" href="{% static 'curd_app/css/style.css' %}">
+</head>
+<body>
+ 
+{% block title %}Student Form{% endblock %}
+{% block content %}
+
+  <div class="container mt-4">
+    <h2>Student Form</h2>
+    <form method="POST" class="form-custom">
+      {% csrf_token %}
+      
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" value="{{ student.name|default:'' }}">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" value="{{ student.email|default:'' }}">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Age</label>
+        <input type="number" class="form-control" name="age" value="{{ student.age|default:'' }}">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Address</label>
+        <textarea class="form-control" name="address">{{ student.address|default:'' }}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+    {% endblock %}
+
+  </div>
+</body>
+</html>
