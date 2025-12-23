@@ -1,0 +1,30 @@
+{% extends 'curd_app/nav.html' %}
+
+{% block title %}Student List{% endblock %}
+
+{% block content %}
+  <h2 class="heading-main">Student List</h2>
+  <a href="{% url 'student_create' %}" class="btn btn-gradient">Add Student</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th><th>Name</th><th>Email</th><th>Age</th><th>Address</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in students %}
+      <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.age }}</td>
+        <td>{{ i.address }}</td>
+        <td>
+          <a href="{% url 'student_update' i.id %}" class="btn btn-success btn-sm btn-action">Edit</a>
+          <a href="{% url 'student_delete' i.id %}" class="btn btn-danger btn-sm btn-action">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -22,8 +22,9 @@ from django.contrib import admin
 from django.urls import path, include
 from curd_app import views   # import your views
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('students/', include('curd_app.urls')),
-    path('', views.student_list, name='home'),  # root URL shows student list
+    path('', include('curd_app.urls')),  # root points to curd_app
 ]
